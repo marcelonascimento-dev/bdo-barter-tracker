@@ -262,14 +262,14 @@
       const nm = itemName(i);
       const safeNm = nm.replace(/"/g,'&quot;');
       return `<div class="card t-${i.cat} stock-${lvl}" data-id="${i.id}">
-        <div class="icon"><a href="https://bdocodex.com/${urlLang}/item/${i.id}/" target="_blank" rel="noopener"><img src="${i.icon}" alt="" loading="lazy"></a></div>
-        <div class="name t-${i.cat}"><span class="badge b-${i.cat}">${i.cat}</span><a href="https://bdocodex.com/${urlLang}/item/${i.id}/" target="_blank" rel="noopener" title="${safeNm}">${nm}</a></div>
+        <div class="icon"><a href="https://bdocodex.com/${urlLang}/item/${i.id}/" target="_blank" rel="noopener" tabindex="-1"><img src="${i.icon}" alt="" loading="lazy"></a></div>
+        <div class="name t-${i.cat}"><span class="badge b-${i.cat}">${i.cat}</span><a href="https://bdocodex.com/${urlLang}/item/${i.id}/" target="_blank" rel="noopener" title="${safeNm}" tabindex="-1">${nm}</a></div>
         <div class="qty">
-          <button data-d="-10" title="-10">−10</button>
-          <button data-d="-1">−</button>
+          <button data-d="-10" title="-10" tabindex="-1">−10</button>
+          <button data-d="-1" tabindex="-1">−</button>
           <input type="number" min="0" step="1" value="${q}" class="${q>0?'has':''}">
-          <button data-d="1">+</button>
-          <button data-d="10" title="+10">+10</button>
+          <button data-d="1" tabindex="-1">+</button>
+          <button data-d="10" title="+10" tabindex="-1">+10</button>
         </div>
       </div>`;
     }).join('');
