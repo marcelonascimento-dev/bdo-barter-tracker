@@ -76,7 +76,8 @@
   .empty{text-align:center;color:var(--tx2);padding:40px;font-size:14px}
   footer{position:fixed;bottom:0;left:0;right:0;background:#0e1218ee;backdrop-filter:blur(6px);border-top:1px solid var(--bd);padding:8px 20px;font-size:12px;color:var(--tx2);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
   footer .src{font-size:11px;opacity:.7}
-  .lang{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+  .lang{display:flex;align-items:stretch;border:1px solid var(--bd);border-radius:6px;overflow:hidden}
+  .lang .lang-ico{display:flex;align-items:center;justify-content:center;padding:0 8px;background:var(--bg2);color:var(--tx2);border-right:1px solid var(--bd)}
   .lang button{border:0;border-radius:0;padding:6px 10px;font-size:12px;font-weight:600;background:var(--bg2)}
   .lang button.on{background:var(--ac);color:#1a1300}
   .lang button+button{border-left:1px solid var(--bd)}
@@ -95,7 +96,15 @@
     <button id="btn-export"></button>
     <button id="btn-import"></button>
     <button id="btn-clear"></button>
-    <div class="lang">
+    <div class="lang" title="Language / Idioma">
+      <span class="lang-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18"/>
+          <path d="M12 3a14 14 0 0 1 0 18"/>
+          <path d="M12 3a14 14 0 0 0 0 18"/>
+        </svg>
+      </span>
       <button data-lang="pt">PT</button>
       <button data-lang="en">EN</button>
     </div>
